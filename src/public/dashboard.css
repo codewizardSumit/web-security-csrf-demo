@@ -1,0 +1,49 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(illustration-anime-city.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(244, 248, 246);
+    font-size: larger;
+    font-weight: 600;
+    }
+    
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(illustration-anime-city.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(3px);
+        opacity: 1px;
+        z-index: -1;
+    }
+body button{
+    background-color: rgb(244, 248, 246);
+    color: rgb(44, 62, 80);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+body button:hover{
+    background-color: rgb(44, 62, 80);
+    color: rgb(244, 248, 246);
+}

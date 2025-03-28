@@ -1,0 +1,84 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+     outline: none;
+     text-decoration: none;
+     list-style: none;
+}
+
+body {         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+        font-family: 'Poppins', sans-serif;
+        height: 100vh;
+        background: #f1f1f1;
+}
+
+.header {
+              margin: 0 auto;
+              padding: 10px;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+              width: 100%;
+              text-align: center;
+              color: black;
+              background-color: lightgray;
+              margin-bottom: 30px;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+}
+
+body form {
+              width: 100%;
+
+              max-width: 460px;
+              background: black;
+              box-sizing: border-box;
+              border-radius: 5px;
+
+              padding: 45px;
+              border-radius: 10px;
+              box-shadow: 0 1px 2px green;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+}
+
+form input {
+              width: 100%;
+              padding: 10px;
+              margin: 10px 0;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              color: black;
+                background: lightgray;
+
+}
+form label{
+    color: greenyellow;
+    text-align: left;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 20px;
+}
+form button {
+              width: 100%;
+              padding: 10px;
+              margin: 10px 0;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              color: white;
+              background: green;
+              cursor: pointer;
+              font-weight: 400;
+                font-size: medium;
+}

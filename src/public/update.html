@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="login.css">
+    <style>h1
+    {
+              margin: 0 auto;
+              padding: 10px;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+              width: 100%;
+              text-align: center;
+              color: black;
+              background-color: lightgray;
+              margin-bottom: 30px;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+
+    }
+    .container
+    {
+        margin-top: 100px;
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+	<a href="/home.html"><h1>Update Profile</h1></a>
+    <div class="container">
+        
+        <form id="update-form">
+            <label for="current-email">Current Email</label>
+            <input type="email" id="current-email" name="userEmail" required>
+
+            <label for="new-email">New Email </label>
+            <input type="email" id="new-email" name="newEmail">
+
+            <label for="new-password">New Password </label>
+            <input type="password" id="new-password" name="newPassword">
+
+            <button type="submit">Update</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById("update-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const formData = {
+                userEmail: document.getElementById("current-email").value,
+                newEmail: document.getElementById("new-email").value,
+                newPassword: document.getElementById("new-password").value
+            };
+
+            const response = await fetch("/update", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            document.getElementById("message").textContent = result.message;
+        });
+    </script>
+</body>
+</html>

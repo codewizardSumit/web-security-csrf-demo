@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: csrf_demo_node_app
+    working_dir: /csrf_demo
+    ports:
+      - "4000:4000"
+    command: ["npm", "start"]

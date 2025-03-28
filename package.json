@@ -1,0 +1,20 @@
+{
+  "name": "csrf_ctf",
+  "version": "1.0.0",
+  "description": "This project is aimed to demonstrate the CSRF CTF",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "SUMIT KUMAR",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "http": "^0.0.1-security",
+    "nodemon": "^3.1.9"
+  }
+}

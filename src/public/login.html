@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="header">
+	    <a href="/home.html"><h1>Login</h1>
+		    <p>Please login to continue</p></a>
+    </div>
+
+    <form action="/login" method="post" id="login-form">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            const formData = {
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value
+            };
+
+            const response = await fetch("/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                window.location.href = "/dashboard"; // Redirect on success
+            } else {
+                alert("Login failed: " + result.message);
+            }
+        });
+    </script>
+</body>
+</html>
